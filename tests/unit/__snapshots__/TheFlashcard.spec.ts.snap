@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TheFlashcard.vue matches snapshot 1`] = `
+<div
+  class="flashcard"
+>
+  <div
+    class="flashcard__wrapper a-flipInX flashcard__front"
+    style="background-color: white; color: black;"
+  >
+    <div
+      class="flashcard__header"
+      style="padding-bottom: 15px;"
+    >
+      Question
+    </div>
+     
+    <div
+      class="flashcard__content"
+    >
+      <p
+        class="flashcard__text"
+        style="font-size: 2em; font-weight: bold;"
+      >
+        
+        Front
+      
+      </p>
+       
+      <!---->
+    </div>
+     
+    <div
+      class="flashcard__footer"
+    >
+      Click to flip
+    </div>
+  </div>
+   
+  <div
+    class=" flashcard__wrapper a-flipInX flashcard__back"
+    style="background-color: rgb(46, 204, 113); color: white; display: none;"
+  >
+    <div
+      class="flashcard__header"
+      style="padding-bottom: 15px;"
+    >
+      Answer
+    </div>
+     
+    <div
+      class="flashcard__content"
+    >
+      <p
+        class="flashcard__text"
+        style="font-size: 2em; font-weight: bold;"
+      >
+        
+        Back
+      
+      </p>
+       
+      <!---->
+    </div>
+     
+    <div
+      class="flashcard__footer"
+    >
+      Click to flip
+    </div>
+  </div>
+</div>
+`;
