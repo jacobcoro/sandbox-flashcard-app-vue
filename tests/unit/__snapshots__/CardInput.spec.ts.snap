@@ -7,7 +7,7 @@ exports[`CardImport.Vue matches snapshot 1`] = `
   <h2
     class="card-input__title title"
   >
-    Create a card
+    Create a Card
   </h2>
    
   <p

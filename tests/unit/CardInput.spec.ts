@@ -31,7 +31,7 @@ describe('CardImport.Vue', () => {
     expect(wrapper.element).toMatchSnapshot();
   });
   it('has 1 font awesome icon button', () => {
-    const buttons = wrapper.findAll(FontAwesomeIcon);
+    const buttons = wrapper.findAllComponents(FontAwesomeIcon);
     // this works in mount but not shallowMount
     expect(buttons).toHaveLength(1);
   });

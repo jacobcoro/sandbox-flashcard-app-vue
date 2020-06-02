@@ -1,9 +1,9 @@
 <template>
   <div class="card-editor">
     <p class="form__top-label">Front</p>
-    <input v-model="newFrontText" class="form__text-input" type="text" />
+    <input v-model="newFrontText" name="card-front-input" class="form__text-input" type="text" />
     <p class="form__top-label">Back</p>
-    <input v-model="newBackText" class="form__text-input" type="text" />
+    <input v-model="newBackText" name="card-back-input" class="form__text-input" type="text" />
     <div class="form__btn-row">
       <font-awesome-icon
         class="form__btn btn form__btn--cancel"

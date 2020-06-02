@@ -1,10 +1,10 @@
 <template>
   <div class="card-input">
-    <h2 class="card-input__title title">Create a card</h2>
+    <h2 class="card-input__title title">Create a Card</h2>
     <p class="form__top-label">Front</p>
-    <input v-model="frontText" class="form__text-input" type="text" />
+    <input v-model="frontText" name="card-front-input" class="form__text-input" type="text" />
     <p class="form__top-label">Back</p>
-    <input v-model="backText" class="form__text-input" type="text" />
+    <input v-model="backText" name="card-back-input" class="form__text-input" type="text" />
 
     <div class="form__top-label">
       Add card to deck: <strong class="form__top-label--strong">{{ selectedDeck }}</strong>

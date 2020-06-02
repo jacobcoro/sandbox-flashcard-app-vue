@@ -46,7 +46,7 @@ describe('DeckDisplay.vue', () => {
     expect(wrapper.element).toMatchSnapshot();
   });
   it('has font awesome icon buttons', () => {
-    const buttons = wrapper.findAll(FontAwesomeIcon);
+    const buttons = wrapper.findAllComponents(FontAwesomeIcon);
     // this works in mount but not shallowMount
     expect(buttons).toHaveLength(4);
   });

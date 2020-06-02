@@ -8,7 +8,7 @@ It was started with Vue CLI.
 
 ### Typescript
 
-It uses typescript, although the usage is rather simple and should be easy for TS begginners to understand.
+It uses typescript, although the usage is rather simple and should be easy for TS beginners to understand.
 
 ### BEM
 
@@ -28,15 +28,16 @@ I've tried to follow the 'container component' idea also from [Marcus Oberlehner
 
 It uses Vuex typescript helper [docs](https://github.com/paleo/direct-vuex) and [tutorial](https://itnext.io/use-a-vuex-store-with-typing-in-typescript-without-decorators-or-boilerplate-57732d175ff3)
 
-It uses vuex persist to persist user keys in coookies [github](https://github.com/championswimmer/vuex-persist)
+It uses vuex persist to persist user keys in cookies [github](https://github.com/championswimmer/vuex-persist)
 
 ## How to use
 
-All of the components are very simple, and route all of the decision making up to the view (ViewName.vue in src/views/) they are in. The view VanillaCRUD.vue has all of the simple Create Read Update and Delete functions in the methods. If you want to test a library that deals with CRUD operations, that's the place to start.
+All of the components are very simple, and route all of the decision making up to the view (ViewName.vue in src/views/) they are in. The view VanillaCRUD.vue has all of the simple Create Read Update and Delete functions in the methods (`Vue.extend({ methods: {}})`). If you want to test a library that deals with CRUD operations, that's the place to start.
 
 As an example of how to do that, I created another view VuexPersisted, to test out the vuex-persisted library and direct-vuex libraries. If you don't want to use vuex, delete that view, and the store folder, and the lines with 'store' in main.ts and src/router/index.ts
 
-To create a new test suite, create a new view, copying the VanillaCRUD.vue, and add it to the src/router/index.ts routes. Also add it to the 'routeNames' list in tests/e2e/specs/test.js
+To create a new test suite:
+create a new view by copying the VanillaCRUD.vue with a new name in the src/views folder, then add it to the src/router/index.ts routes. Then add it to the 'routeNames' list in tests/e2e/specs/e2etest.js and your new view will be included in e2e tests
 
 ## Project setup
 
@@ -91,3 +92,11 @@ npm run test:e2e
 ```shell
 npm run lint
 ```
+
+## Issues, bugs
+
+If you find a bug or would like to make a suggestion, create an issue or pr, or contact me at my [website](https://www.jacobcohen-rosenthal.me)
+
+I'd love some feedback about whether the tests are well designed/offering good coverage or not.
+
+known issue: typescript is complaining about 'this.decks' in VuexPersisted.vue any tips on this are appreciated
