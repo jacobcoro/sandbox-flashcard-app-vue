@@ -2,13 +2,20 @@
 
 ## A sandbox for testing new libraries and techniques
 
-This sandbox app is a great place to test out whatever you'd like to learn. I used it to learn about unit, snapshot and e2e testing, typescript, and BEM style CSS techniques.
+This sandbox app is a great place to test out whatever you'd like to learn.
+
+I used it to learn about unit, snapshot and e2e testing, typescript, and BEM style CSS techniques.
 
 It was started with Vue CLI.
 
 ### Typescript
 
 It uses typescript, although the usage is rather simple and should be easy for TS beginners to understand.
+
+If you don’t want to use Typescript, you can remove `lang=“ts”` from `<script>` ,
+remove the line `import { Deck, Card, NewCardPayload, DeleteCardPayload, EditCardPayload } from ‘@/types’;`
+remove the typings: `as Deck[]`, `as string` and `NewCardPayload` etc.
+and remove `Vue.extends(` from the beginning of components, along with the trailing )
 
 ### BEM
 
@@ -26,9 +33,9 @@ I've tried to follow the 'container component' idea also from [Marcus Oberlehner
 
 ### Vuex
 
-It uses Vuex typescript helper [docs](https://github.com/paleo/direct-vuex) and [tutorial](https://itnext.io/use-a-vuex-store-with-typing-in-typescript-without-decorators-or-boilerplate-57732d175ff3)
+It uses a vuex typescript helper called direct-vuex [docs](https://github.com/paleo/direct-vuex) and [tutorial](https://itnext.io/use-a-vuex-store-with-typing-in-typescript-without-decorators-or-boilerplate-57732d175ff3)
 
-It uses vuex persist to persist user keys in cookies [github](https://github.com/championswimmer/vuex-persist)
+It uses vuex persist to persist user keys in cookies [github](https://github.com/championswimmer/vuex-persist) and flashcards in the local storage.
 
 ## How to use
 
@@ -36,8 +43,11 @@ All of the components are very simple, and route all of the decision making up t
 
 As an example of how to do that, I created another view VuexPersisted, to test out the vuex-persisted library and direct-vuex libraries. If you don't want to use vuex, delete that view, and the store folder, and the lines with 'store' in main.ts and src/router/index.ts
 
-To create a new test suite:
-create a new view by copying the VanillaCRUD.vue with a new name in the src/views folder, then add it to the src/router/index.ts routes. Then add it to the 'routeNames' list in tests/e2e/specs/e2etest.js and your new view will be included in e2e tests
+### To create a new view and test suite
+
+- Create a new view by copying the VanillaCRUD.vue with a new name in the src/views folder.
+- Add it to the src/router/index.ts routes.
+- Add it to the 'routeNames' list in tests/e2e/specs/e2etest.js and your new view will be included in e2e tests
 
 ## Project setup
 
