@@ -1,12 +1,8 @@
 <template>
   <div class="app u-scroller">
     <div class="app__nav nav">
-      <router-link class="nav__link" to="/VanillaCRUD"
-        >0: Vanilla Vue CRUD</router-link
-      >
-      <router-link class="nav__link" to="/VuexPersisted"
-        >1: Vuex Persisted</router-link
-      >
+      <router-link class="nav__link" to="/VanillaCRUD">0: Vanilla Vue CRUD</router-link>
+      <router-link class="nav__link" to="/VuexPersisted">1: Vuex Persisted</router-link>
     </div>
     <router-view class="app_router-view" />
   </div>
