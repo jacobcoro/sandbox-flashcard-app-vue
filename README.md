@@ -48,6 +48,7 @@ As an example of how to do that, I created another view VuexPersisted, to test o
 - Create a new view by copying the VanillaCRUD.vue with a new name in the src/views folder.
 - Add it to the src/router/index.ts routes.
 - Add it to the 'routeNames' list in tests/e2e/specs/e2etest.js and your new view will be included in e2e tests
+- Add it to the router-links in the template in App.vue
 
 ## Project setup
 
