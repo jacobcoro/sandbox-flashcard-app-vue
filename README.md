@@ -52,55 +52,55 @@ As an example of how to do that, I created another view VuexPersisted, to test o
 
 ## Project setup
 
-```shell
+```bash
 npm install
 ```
 
 ### Compiles and hot-reloads for development
 
-```shell
+```bash
 npm run serve
 ```
 
 ### Compiles and minifies for production
 
-```shell
+```bash
 npm run build
 ```
 
 ### Run your unit and snapshot tests
 
-```shell
+```bash
 npm run test:unit
 ```
 
 to update snapshots:
 
-```shell
+```bash
 npm run test:unit -- -u
 ```
 
 with hot reloading:
 
-```shell
+```bash
 npm run test:unit:watch
 ```
 
 with debugging:
 
-```shell
+```bash
 npm run test:unit:debug
 ```
 
 ### Run your end-to-end tests
 
-```shell
+```bash
 npm run test:e2e
 ```
 
 ### Lints and fixes files
 
-```shell
+```bash
 npm run lint
 ```
 
