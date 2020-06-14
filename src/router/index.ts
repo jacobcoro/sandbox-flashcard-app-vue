@@ -3,6 +3,8 @@ import VueRouter, { RouteConfig } from 'vue-router';
 import store from '../store';
 import VanillaCRUD from '../views/VanillaCRUD.vue';
 import VuexPersisted from '../views/VuexPersisted.vue';
+import CompositionApiVanilla from '../views/CompositionApiVanilla.vue';
+import ComposVuexPersist from '../views/ComposVuexPersist.vue';
 
 Vue.use(VueRouter);
 
@@ -22,6 +24,16 @@ const routes: Array<RouteConfig> = [
     name: 'VuexPersisted',
     component: VuexPersisted,
   },
+  {
+    path: '/CompositionApiVanilla',
+    name: 'CompositionApiVanilla',
+    component: CompositionApiVanilla,
+  },
+  {
+    path: '/ComposVuexPersist',
+    name: 'ComposVuexPersist',
+    component: ComposVuexPersist,
+  },
 ];
 
 const router = new VueRouter({
@@ -30,11 +42,7 @@ const router = new VueRouter({
   routes,
 });
 
-const waitForStorageToBeReady = async (
-  to: any,
-  from: any,
-  next: () => void
-) => {
+const waitForStorageToBeReady = async (to: any, from: any, next: () => void) => {
   // undocumented bug in vuex-persist with localforage. Hacky fix from issues forum
   await ((store as unknown) as { restored: Promise<unknown> }).restored;
   next();

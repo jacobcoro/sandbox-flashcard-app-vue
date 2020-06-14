@@ -21,6 +21,11 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 // Vue.component('font-awesome-layers', FontAwesomeLayers);
 Vue.config.productionTip = false;
 
+import VueCompositionApi from '@vue/composition-api';
+
+Vue.config.productionTip = false;
+Vue.use(VueCompositionApi);
+
 new Vue({
   router,
   store: store.original,

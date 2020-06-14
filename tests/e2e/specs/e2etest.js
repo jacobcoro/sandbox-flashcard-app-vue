@@ -6,7 +6,7 @@
 /// <reference types="cypress" />
 // @ts-check
 
-const routeNames = ['VanillaCRUD', 'VuexPersisted'];
+const routeNames = ['VanillaCRUD', 'VuexPersisted', 'CompositionApiVanilla', 'ComposVuexPersist'];
 const baseUrl = 'localhost:8080/';
 
 const testRoute = routeName => {

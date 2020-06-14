@@ -4,7 +4,7 @@
 
 This sandbox app is a great place to test out whatever you'd like to learn.
 
-I used it to learn about unit, snapshot and e2e testing, typescript, and BEM style CSS techniques.
+I used it to learn about unit, snapshot and e2e testing, Vue composition API, typescript, and BEM style CSS techniques.
 
 It was started with Vue CLI.
 

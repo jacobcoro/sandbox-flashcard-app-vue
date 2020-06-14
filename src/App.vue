@@ -3,6 +3,8 @@
     <div class="app__nav nav">
       <router-link class="nav__link" to="/VanillaCRUD">0: Vanilla Vue CRUD</router-link>
       <router-link class="nav__link" to="/VuexPersisted">1: Vuex Persisted</router-link>
+      <router-link class="nav__link" to="/CompositionApiVanilla">2: Composition API</router-link>
+      <router-link class="nav__link" to="/ComposVuexPersist">3: ComposVuexPersist</router-link>
     </div>
     <router-view class="app_router-view" />
   </div>
