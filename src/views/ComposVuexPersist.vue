@@ -56,25 +56,25 @@ export default {
       editPayload: {} as EditCardPayload,
     });
 
-    const createDeck = function(deck: Deck) {
+    const createDeck = (deck: Deck) => {
       store.commit.decksMod.addDeck(deck);
       state.selectedDeck = deck.title;
     };
-    const addCard = function(payload: NewCardPayload) {
+    const addCard = (payload: NewCardPayload) => {
       payload.deckTitle = state.selectedDeck;
       store.commit.decksMod.addCard(payload);
     };
-    const editCard = function(payload: EditCardPayload) {
+    const editCard = (payload: EditCardPayload) => {
       store.commit.decksMod.editCard(payload);
       state.showEditor = false;
     };
-    const deleteCard = function(payload: DeleteCardPayload) {
+    const deleteCard = (payload: DeleteCardPayload) => {
       store.commit.decksMod.deleteCard(payload);
     };
-    const changeSelectedDeck = function(title: string) {
+    const changeSelectedDeck = (title: string) => {
       state.selectedDeck = title;
     };
-    const openEditor = function(payload: EditCardPayload) {
+    const openEditor = (payload: EditCardPayload) => {
       state.editPayload = payload;
       state.showEditor = true;
     };

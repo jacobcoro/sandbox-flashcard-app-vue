@@ -53,11 +53,11 @@ export default {
       showEditor: false as boolean,
       editPayload: {} as EditCardPayload,
     });
-    const createDeck = function(deck: Deck) {
+    const createDeck = (deck: Deck) => {
       state.decks.push(deck);
       state.selectedDeck = deck.title;
     };
-    const addCard = function(payload: NewCardPayload) {
+    const addCard = (payload: NewCardPayload) => {
       const newCard: Card = {
         _id: uuid(),
         frontText: payload.frontText,
@@ -70,7 +70,7 @@ export default {
         }
       }
     };
-    const editCard = function(payload: EditCardPayload) {
+    const editCard = (payload: EditCardPayload) => {
       for (const deck of state.decks) {
         if (deck.title === payload.deckTitle) {
           for (const card of deck.cards) {
@@ -85,7 +85,7 @@ export default {
       }
       state.showEditor = false;
     };
-    const deleteCard = function(payload: DeleteCardPayload) {
+    const deleteCard = (payload: DeleteCardPayload) => {
       for (const deck of state.decks) {
         if (deck.title === payload.deckTitle) {
           for (const card of deck.cards) {
@@ -98,10 +98,10 @@ export default {
         }
       }
     };
-    const changeSelectedDeck = function(title: string) {
+    const changeSelectedDeck = (title: string) => {
       state.selectedDeck = title;
     };
-    const openEditor = function(payload: EditCardPayload) {
+    const openEditor = (payload: EditCardPayload) => {
       state.editPayload = payload;
       state.showEditor = true;
     };
