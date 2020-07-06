@@ -14,12 +14,12 @@ import defaultDeck from '@/assets/defaultDeck.json';
 // Hacky fix. For some reason when vuex-persist is combined with direct-vuex,
 // the store will get overwritten by default values.
 const setDefault = function(store: any) {
-  console.log(store.state);
+  // console.log(store.state);
   for (const deck of store.state.decksMod.decks) {
     if (deck._id === '123') return null;
   }
   store.commit.decksMod.addDeck(defaultDeck);
-  console.log(store.state);
+  // console.log(store.state);
 };
 
 // const vuexLocalForage = new VuexPersistence<State>({

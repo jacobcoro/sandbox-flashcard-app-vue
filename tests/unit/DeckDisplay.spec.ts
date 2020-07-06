@@ -59,7 +59,7 @@ describe('DeckDisplay.vue', () => {
     expect(cards).toHaveLength(2);
   });
   it('emits the correct data when edit card is clicked', async () => {
-    const editButton = wrapper.findAll('.btns-col__btn--edit').at(0);
+    const editButton = wrapper.findAll('.buttons-col__button--edit').at(0);
     await editButton.trigger('click');
     const expectedOutput = {
       frontText: 'FrontText',
@@ -70,7 +70,7 @@ describe('DeckDisplay.vue', () => {
     expect(JSON.stringify(wrapper.emitted().openEditor[0][0])).toBe(JSON.stringify(expectedOutput));
   });
   it('emits the correct data when delete card is clicked', async () => {
-    const deleteButton = wrapper.findAll('.btns-col__btn--delete').at(0);
+    const deleteButton = wrapper.findAll('.buttons-col__button--delete').at(0);
     await deleteButton.trigger('click');
     const expectedOutput = {
       _id: '1',

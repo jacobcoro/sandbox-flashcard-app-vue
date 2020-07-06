@@ -1,38 +1,35 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
 import store from '../store';
-import VanillaCRUD from '../views/VanillaCRUD.vue';
-import VuexPersisted from '../views/VuexPersisted.vue';
-import CompositionApiVanilla from '../views/CompositionApiVanilla.vue';
-import ComposVuexPersist from '../views/ComposVuexPersist.vue';
+import Login from '../views/Login.vue';
+import Home from '../views/Home.vue';
 
 Vue.use(VueRouter);
+
+async function redirectIfNotAuth(to: any, from: any, next: any) {
+  if (store.getters.authMod.isAuthenticated) {
+    next();
+  } else {
+    next('/login');
+  }
+}
 
 const routes: Array<RouteConfig> = [
   {
     path: '/',
-    name: 'VanillaCRUD',
-    component: VanillaCRUD,
+    name: 'Login',
+    component: Login,
   },
   {
-    path: '/VanillaCRUD',
-    name: 'VanillaCRUD',
-    component: VanillaCRUD,
+    path: '/login',
+    name: 'Login',
+    component: Login,
   },
   {
-    path: '/VuexPersisted',
-    name: 'VuexPersisted',
-    component: VuexPersisted,
-  },
-  {
-    path: '/CompositionApiVanilla',
-    name: 'CompositionApiVanilla',
-    component: CompositionApiVanilla,
-  },
-  {
-    path: '/ComposVuexPersist',
-    name: 'ComposVuexPersist',
-    component: ComposVuexPersist,
+    path: '/home',
+    name: 'Home',
+    component: Home,
+    beforeEnter: redirectIfNotAuth,
   },
 ];
 

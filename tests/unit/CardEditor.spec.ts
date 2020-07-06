@@ -42,8 +42,8 @@ describe('CardEditor.vue', () => {
 
   frontInput = wrapper.findAll('.card-editor .form__text-input').at(0);
   backInput = wrapper.findAll('.card-editor .form__text-input').at(1);
-  cancelButton = wrapper.find('.card-editor .form__btn--cancel');
-  confirmButton = wrapper.find('.card-editor .form__btn--confirm');
+  cancelButton = wrapper.find('.card-editor .form__button--cancel');
+  confirmButton = wrapper.find('.card-editor .form__button--confirm');
   it('renders', () => {
     expect(wrapper.exists()).toBe(true);
   });
@@ -79,7 +79,7 @@ describe('CardEditor.vue', () => {
     expect(buttons).toHaveLength(2);
   });
   it('has 2 icon buttons', () => {
-    const buttons = wrapper.findAll('.card-editor .btn');
+    const buttons = wrapper.findAll('.card-editor .button');
     expect(buttons).toHaveLength(2);
   });
 });

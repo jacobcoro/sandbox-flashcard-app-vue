@@ -11,9 +11,9 @@
         :front="card.frontText"
         :back="card.backText"
       ></flashcard>
-      <div class="deck-display__btns-col btns-col">
+      <div class="deck-display__buttons-col buttons-col">
         <font-awesome-icon
-          class="btns-col__btn btns-col__btn--edit btn"
+          class="buttons-col__button buttons-col__button--edit button"
           size="2x"
           icon="edit"
           @click="
@@ -26,7 +26,7 @@
           "
         ></font-awesome-icon>
         <font-awesome-icon
-          class="btns-col__btn btns-col__btn--delete btn"
+          class="buttons-col__button buttons-col__button--delete button"
           size="2x"
           icon="trash-alt"
           @click="$emit('deleteCard', { _id: card._id, deckTitle: deck.title })"
@@ -71,7 +71,7 @@ export default Vue.extend({
   display: flex;
   max-width: 600px;
 }
-.btns-col {
+.buttons-col {
   display: flex;
   flex-direction: column;
   justify-content: space-around;

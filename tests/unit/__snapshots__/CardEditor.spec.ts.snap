@@ -27,11 +27,11 @@ exports[`CardEditor.vue matches snapshot 1`] = `
   />
    
   <div
-    class="form__btn-row"
+    class="form__button-row"
   >
     <svg
       aria-hidden="true"
-      class="form__btn btn form__btn--cancel svg-inline--fa fa-times fa-w-11 fa-2x"
+      class="form__button button form__button--cancel svg-inline--fa fa-times fa-w-11 fa-2x"
       data-icon="times"
       data-prefix="fas"
       focusable="false"
@@ -48,7 +48,7 @@ exports[`CardEditor.vue matches snapshot 1`] = `
      
     <svg
       aria-hidden="true"
-      class="form__btn btn form__btn--confirm svg-inline--fa fa-check fa-w-16 fa-2x"
+      class="form__button button form__button--confirm svg-inline--fa fa-check fa-w-16 fa-2x"
       color="rgb(46, 204, 113)"
       data-icon="check"
       data-prefix="fas"

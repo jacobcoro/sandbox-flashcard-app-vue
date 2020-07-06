@@ -84,11 +84,11 @@ exports[`DeckDisplay.vue matches snapshot 1`] = `
     </div>
      
     <div
-      class="deck-display__btns-col btns-col"
+      class="deck-display__buttons-col buttons-col"
     >
       <svg
         aria-hidden="true"
-        class="btns-col__btn btns-col__btn--edit btn svg-inline--fa fa-edit fa-w-18 fa-2x"
+        class="buttons-col__button buttons-col__button--edit button svg-inline--fa fa-edit fa-w-18 fa-2x"
         data-icon="edit"
         data-prefix="fas"
         focusable="false"
@@ -105,7 +105,7 @@ exports[`DeckDisplay.vue matches snapshot 1`] = `
        
       <svg
         aria-hidden="true"
-        class="btns-col__btn btns-col__btn--delete btn svg-inline--fa fa-trash-alt fa-w-14 fa-2x"
+        class="buttons-col__button buttons-col__button--delete button svg-inline--fa fa-trash-alt fa-w-14 fa-2x"
         data-icon="trash-alt"
         data-prefix="fas"
         focusable="false"
@@ -195,11 +195,11 @@ exports[`DeckDisplay.vue matches snapshot 1`] = `
     </div>
      
     <div
-      class="deck-display__btns-col btns-col"
+      class="deck-display__buttons-col buttons-col"
     >
       <svg
         aria-hidden="true"
-        class="btns-col__btn btns-col__btn--edit btn svg-inline--fa fa-edit fa-w-18 fa-2x"
+        class="buttons-col__button buttons-col__button--edit button svg-inline--fa fa-edit fa-w-18 fa-2x"
         data-icon="edit"
         data-prefix="fas"
         focusable="false"
@@ -216,7 +216,7 @@ exports[`DeckDisplay.vue matches snapshot 1`] = `
        
       <svg
         aria-hidden="true"
-        class="btns-col__btn btns-col__btn--delete btn svg-inline--fa fa-trash-alt fa-w-14 fa-2x"
+        class="buttons-col__button buttons-col__button--delete button svg-inline--fa fa-trash-alt fa-w-14 fa-2x"
         data-icon="trash-alt"
         data-prefix="fas"
         focusable="false"

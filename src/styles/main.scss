@@ -1,5 +1,7 @@
-@import '_reset.scss';
-@import '_variables.scss';
+@import 'bootstrap-custom';
+
+
+
 
 /* ---------------------------------------------
 
@@ -71,7 +73,7 @@ COMPONENTS === BLOCKS __ELEMENTS --MODIFIERS
   border-bottom: 1px solid grey;
 }
 
-.btn {
+.button {
   cursor: pointer;
 }
 
@@ -83,13 +85,13 @@ COMPONENTS === BLOCKS __ELEMENTS --MODIFIERS
   min-width: 80%;
 }
 
-.form__btn-row {
+.form__button-row {
   margin: 15px 0;
   display: flex;
   justify-content: space-around;
 }
 
-.form__btn {
+.form__button {
   cursor: pointer;
 }
 

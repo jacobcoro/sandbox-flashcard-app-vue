@@ -23,7 +23,7 @@
     </span>
     <div class="card-input__add-icon-wrapper">
       <font-awesome-icon
-        class="card-input__add-icon btn"
+        class="card-input__add-icon button"
         color="rgb(46, 204, 113)"
         icon="plus-square"
         size="2x"

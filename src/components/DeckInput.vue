@@ -5,7 +5,7 @@
     <input v-model="newTitle" class="form__text-input" type="text" />
     <div class="deck-input__add-icon-wrapper">
       <font-awesome-icon
-        class="deck-input__add-icon btn"
+        class="deck-input__add-icon button"
         color="rgb(46, 204, 113)"
         size="2x"
         icon="plus-square"

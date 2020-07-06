@@ -26,7 +26,7 @@ exports[`DeckInput.vue matches snapshot 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="deck-input__add-icon btn svg-inline--fa fa-plus-square fa-w-14 fa-2x"
+      class="deck-input__add-icon button svg-inline--fa fa-plus-square fa-w-14 fa-2x"
       color="rgb(46, 204, 113)"
       data-icon="plus-square"
       data-prefix="fas"

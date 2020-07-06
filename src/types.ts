@@ -24,11 +24,7 @@ export interface DeleteCardPayload {
   deckTitle: string;
 }
 export interface AuthState {
-  CONTEXT_KEY: null | string;
-  IDENTITY_KEY: null | string;
-  TOKEN_KEY: null | string;
-  USER_THREAD_ID: null | string;
-  persistenceKey: null | string;
+  jwt: null | string;
 }
 export interface DecksState {
   decks: Deck[];

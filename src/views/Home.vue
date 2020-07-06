@@ -4,8 +4,8 @@
       <deck-input class="editing-section__deck-input" @createDeck="createDeck"></deck-input>
       <card-input
         class="editing-section__card-input"
-        :selected-deck="selectedDeck"
-        :decks="decks"
+        :selected-deck="state.selectedDeck"
+        :decks="state.decks"
         @addCard="addCard"
         @changeSelectedDeck="changeSelectedDeck"
       ></card-input>
@@ -20,10 +20,10 @@
         @openEditor="openEditor"
       ></deck-display>
       <card-editor
-        v-if="showEditor"
+        v-if="state.showEditor"
         class="display-section__card-editor"
-        :edit-payload="editPayload"
-        @cancelEdit="showEditor = false"
+        :edit-payload="state.editPayload"
+        @cancelEdit="state.showEditor = false"
         @editCard="editCard"
       ></card-editor>
     </section>
@@ -31,7 +31,7 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import { reactive, computed } from '@vue/composition-api';
 
 import { Deck, NewCardPayload, DeleteCardPayload, EditCardPayload } from '@/types';
 
@@ -42,45 +42,53 @@ import DeckInput from '@/components/DeckInput.vue';
 import CardInput from '@/components/CardInput.vue';
 import DeckDisplay from '@/components/DeckDisplay.vue';
 
-export default Vue.extend({
-  name: 'VuexPersisted',
+export default {
+  name: 'ComposVuexPersist',
   components: { CardInput, DeckDisplay, DeckInput, CardEditor },
-  data() {
-    return {
-      // ts keeps complaining Property 'decks' does not exist on type 'CombinedVueInstance<Vue, unknown, unknown, unknown, Readonly<Record<never, any>>>'
-      selectedDeck: this.decks ? (this.decks[0].title as string) : ('' as string),
+  setup() {
+    const decks = computed(() => {
+      return store.getters.decksMod.decks;
+    });
+    // console.log('decks', decks);
+    const state = reactive({
+      selectedDeck: decks ? (decks.value[0].title as string) : ('' as string),
       showEditor: false as boolean,
       editPayload: {} as EditCardPayload,
+    });
+
+    const createDeck = (deck: Deck) => {
+      store.commit.decksMod.addDeck(deck);
+      state.selectedDeck = deck.title;
+    };
+    const addCard = (payload: NewCardPayload) => {
+      payload.deckTitle = state.selectedDeck;
+      store.commit.decksMod.addCard(payload);
+    };
+    const editCard = (payload: EditCardPayload) => {
+      store.commit.decksMod.editCard(payload);
+      state.showEditor = false;
+    };
+    const deleteCard = (payload: DeleteCardPayload) => {
+      store.commit.decksMod.deleteCard(payload);
+    };
+    const changeSelectedDeck = (title: string) => {
+      state.selectedDeck = title;
+    };
+    const openEditor = (payload: EditCardPayload) => {
+      state.editPayload = payload;
+      state.showEditor = true;
+    };
+
+    return {
+      decks,
+      state,
+      createDeck,
+      addCard,
+      editCard,
+      deleteCard,
+      changeSelectedDeck,
+      openEditor,
     };
   },
-  computed: {
-    decks(): Deck[] {
-      return store.getters.decksMod.decks as Deck[];
-    },
-  },
-  methods: {
-    createDeck: function(deck: Deck) {
-      store.commit.decksMod.addDeck(deck);
-      this.selectedDeck = deck.title;
-    },
-    addCard: function(payload: NewCardPayload) {
-      payload.deckTitle = this.selectedDeck;
-      store.commit.decksMod.addCard(payload);
-    },
-    editCard: function(payload: EditCardPayload) {
-      store.commit.decksMod.editCard(payload);
-      this.showEditor = false;
-    },
-    deleteCard: function(payload: DeleteCardPayload) {
-      store.commit.decksMod.deleteCard(payload);
-    },
-    changeSelectedDeck: function(title: string) {
-      this.selectedDeck = title;
-    },
-    openEditor: function(payload: EditCardPayload) {
-      this.editPayload = payload;
-      this.showEditor = true;
-    },
-  },
-});
+};
 </script>

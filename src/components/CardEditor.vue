@@ -4,15 +4,15 @@
     <input v-model="newFrontText" name="card-front-input" class="form__text-input" type="text" />
     <p class="form__top-label">Back</p>
     <input v-model="newBackText" name="card-back-input" class="form__text-input" type="text" />
-    <div class="form__btn-row">
+    <div class="form__button-row">
       <font-awesome-icon
-        class="form__btn btn form__btn--cancel"
+        class="form__button button form__button--cancel"
         icon="times"
         size="2x"
         @click="$emit('cancelEdit')"
       ></font-awesome-icon>
       <font-awesome-icon
-        class="form__btn btn form__btn--confirm"
+        class="form__button button form__button--confirm"
         color="rgb(46, 204, 113)"
         icon="check"
         size="2x"
