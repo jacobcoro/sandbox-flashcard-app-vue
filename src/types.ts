@@ -25,6 +25,7 @@ export interface DeleteCardPayload {
 }
 export interface AuthState {
   jwt: null | string;
+  API_URL: string;
 }
 export interface DecksState {
   decks: Deck[];
@@ -32,4 +33,15 @@ export interface DecksState {
 export interface State {
   authMod: AuthState;
   decksMod: DecksState;
+}
+
+export interface ApiRes<T> {
+  data: T;
+  code: number;
+  message: string;
+}
+export interface PasswordRes {
+  username: string;
+  _id: string;
+  token: string;
 }

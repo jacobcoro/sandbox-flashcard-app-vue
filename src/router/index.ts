@@ -29,7 +29,7 @@ const routes: Array<RouteConfig> = [
     path: '/home',
     name: 'Home',
     component: Home,
-    beforeEnter: redirectIfNotAuth,
+    // beforeEnter: redirectIfNotAuth,
   },
 ];
 
